@@ -5,14 +5,19 @@
   "proxy": "http://localhost:3001",
   "dependencies": {
     "@apollo/client": "^3.3.5",
+    "@material-ui/core": "^4.12.3",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "graphql": "^15.4.0",
+    "pts": "^0.10.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-particles-js": "^3.5.3",
+    "react-pts-canvas": "^0.2.9",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
+    "react-typed": "^1.2.0",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
