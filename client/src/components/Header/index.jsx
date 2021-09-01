@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import Typed from "react-typed";
 import { makeStyles } from "@material-ui/core/styles";
-import logo from "./JDlogoblue.png";
+import logo from "../JDlogoblue.png";
 
 const useStyles = makeStyles((theme) => ({
   avatar: {
@@ -37,7 +37,7 @@ const Header = () => {
   return (
     <Box className={classes.typedContainer}>
       <Grid container justify="center">
-        <Avatar className={classes.avatar} src={logo} alt="John Dinsmore" />
+        <Avatar className={`jdLogo ${classes.avatar}`} src={logo} alt="John Dinsmore" />
       </Grid>
       <Typography className={classes.title} variant="h4">
         <Typed strings={["John Dinsmore"]} typeSpeed={40} />
