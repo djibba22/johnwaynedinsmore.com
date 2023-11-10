@@ -1,5 +1,6 @@
-import React from "react";
-import { Particles as ReactParticles } from "react-particles-js";
+import { useCallback } from "react";
+import Particles from "react-particles";
+import { loadSlim } from "tsparticles-slim";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -9,11 +10,24 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Particles = () => {
+const Particle = () => {
   const classes = useStyles();
 
+  const particlesInit = useCallback(async engine => {
+    console.log(engine);
+    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    //await loadFull(engine);
+    await loadSlim(engine);
+}, []);
+
+const particlesLoaded = useCallback(async container => {
+  await console.log(container);
+}, []);
+
   return (
-    <ReactParticles
+    <Particles
       canvasClassName={classes.particlesCanvas}
       params={{
         particles: {
@@ -57,4 +71,4 @@ const Particles = () => {
   );
 };
 
-export default Particles;
+export default Particle;

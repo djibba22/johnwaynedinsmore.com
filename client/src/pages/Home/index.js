@@ -1,10 +1,9 @@
-import React,{useRef, useEffect,useCallback } from 'react';
+import React, { useRef, useEffect, useCallback } from 'react';
 import { useQuery } from '@apollo/client';
-import Particles from "../../components/Particles/index";
+import Particle from "../../components/Particle/index";
 import Header from "../../components/Header/index";
 import "./Home.css";
 import { QUERY_PROFILES } from '../../utils/queries';
-import Navigation from '../../components/Navigation';
 
 const Home = () => {
   const { loading, data } = useQuery(QUERY_PROFILES);
@@ -30,11 +29,13 @@ const Home = () => {
   }, [handleScroll])
 
   return (
-   <div className="scrollableContainer" ref={ref}>
-      <Header/>
-      <Particles/>
-      <Navigation /> 
-    </div>
+      <div>
+       
+        <div className="scrollableContainer" ref={ref}>
+          <Header />
+          <Particle />
+        </div>
+      </div>
   );
 };
 
