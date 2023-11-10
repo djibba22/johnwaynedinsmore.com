@@ -1,0 +1,7 @@
+.scrollableContainer {
+    width: 100%;
+    height: 300px;
+    overflow-y: auto;
+  }
+  
+ 

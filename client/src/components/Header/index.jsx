@@ -36,11 +36,11 @@ const Header = () => {
 
   return (
     <Box className={classes.typedContainer}>
-      <Grid container justify="center">
+      <Grid container justifyContent="center">
         <Avatar className={`jdLogo ${classes.avatar}`} src={logo} alt="John Dinsmore" />
       </Grid>
       <Typography className={classes.title} variant="h4">
-        <Typed strings={["John Dinsmore"]} typeSpeed={40} />
+        <Typed strings={["John Dinsmore"]} typeSpeed={20} />
       </Typography>
 
       <Typography className={classes.subtitle} variant="h5">
