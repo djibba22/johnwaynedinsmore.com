@@ -5,15 +5,16 @@ import Navigation from './components/Navigation';
 import Home from './pages/Home/index';
 import Products from './components/Products/index';
 import "./App.css";
-import { createTheme ,ThemeProvider} from '@material-ui/core/styles';
-import purple from '@material-ui/core/colors/purple';
-import green from '@material-ui/core/colors/green';
 
-const darkTheme = createTheme({
-  palette: {
-    mode: 'dark',
-  },
-});
+// import { createTheme ,ThemeProvider} from '@material-ui/core/styles';
+// import purple from '@material-ui/core/colors/purple';
+// import green from '@material-ui/core/colors/green';
+
+// const darkTheme = createTheme({
+//   palette: {
+//     mode: 'dark',
+//   },
+// });
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -22,7 +23,7 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <ThemeProvider theme={darkTheme}>
+    
     <ApolloProvider client={client}>
       <Router>
       <Navigation />
@@ -44,7 +45,6 @@ function App() {
         </div>
       </Router>
     </ApolloProvider>
-    </ThemeProvider>
   );
 }
 

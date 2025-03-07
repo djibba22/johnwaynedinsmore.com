@@ -1,9 +1,9 @@
 import React, { useRef, useEffect, useCallback } from 'react';
 import { useQuery } from '@apollo/client';
-import Particle from "../../components/Particle/index";
 import Header from "../../components/Header/index";
 import "./Home.css";
 import { QUERY_PROFILES } from '../../utils/queries';
+import Particle from "../../components/Particle/index";
 
 const Home = () => {
   const { loading, data } = useQuery(QUERY_PROFILES);
@@ -33,7 +33,7 @@ const Home = () => {
        
         <div className="scrollableContainer" ref={ref}>
           <Header />
-          <Particle />
+          <Particle/>
         </div>
       </div>
   );

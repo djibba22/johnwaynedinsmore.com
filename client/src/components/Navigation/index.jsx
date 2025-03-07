@@ -14,7 +14,7 @@ const Navigation = () => {
         <div id="navbar-right">
           <Link to="/" id="logo">Leave</Link>
           <Link to="/products" id="logo">Products</Link>
-          <a href="/products">About</a>
+          <Link to="/about">About</Link>
           <a href="#contact">Contact</a>
           <a href="#about">Tutorials</a>
         </div>
